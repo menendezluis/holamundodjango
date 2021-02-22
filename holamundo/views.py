@@ -1,5 +1,6 @@
 
 from django.http import HttpResponse
+from django.http import JsonResponse
 
 #utilities
 from datetime import datetime
@@ -11,8 +12,7 @@ def hello_world(request):
 def hi(request):
     """Hi"""
     numbers = request.GET['numbers']
-    reader = csv.DictReader(io.StringIO(numbers))
-
-    json_data = json.dumps(list(reader))
     
-    return HttpResponse(json_data, content_type="application/json")
+    json_data = json.dumps(list(numbers))
+    
+    return JsonResponse(json_data, content_type="application/json")
