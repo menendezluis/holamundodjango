@@ -12,8 +12,7 @@ def hello_world(request):
 def hi(request):
     """Hi"""
     numbers = request.GET['numbers']
-    reader = numbers.split(",")
+    listofnumbers = numbers.split(",")
+    dictofvalues = { i : listofnumbers[i] for i in range(0, len(listofnumbers) ) }
 
-    json_numbers = json.dumps(reader)
-    
-    return JsonResponse(json_numbers)
+    return JsonResponse(dictofvalues)
