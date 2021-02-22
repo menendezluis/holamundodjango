@@ -15,5 +15,9 @@ def hi(request):
     listofnumbers = numbers.split(",")
     listofnumbers.sort()
     dictofvalues = { i : listofnumbers[i] for i in range(0, len(listofnumbers) ) }
-
+    data = {
+        'status': 'ok',
+        'numbers': dictofvalues,
+        'message': 'Integers sorted succesfully.'
+    }
     return JsonResponse(dictofvalues)
