@@ -15,4 +15,4 @@ def hi(request):
 
     json_data = json.dumps(list(reader))
     
-    return HttpResponse(json_data)
+    return HttpResponse(json_data, content_type="application/json")
