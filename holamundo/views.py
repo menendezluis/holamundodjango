@@ -12,7 +12,8 @@ def hello_world(request):
 def hi(request):
     """Hi"""
     numbers = request.GET['numbers']
-    
-    json_data = json.dumps(list(numbers))
+    reader = csv.DictReader(numbers)
+
+    json_data = json.dumps(list(reader))
     
     return JsonResponse(json_data, content_type="application/json")
