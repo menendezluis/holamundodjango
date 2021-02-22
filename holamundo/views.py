@@ -20,4 +20,4 @@ def hi(request):
         'numbers': dictofvalues,
         'message': 'Integers sorted succesfully.'
     }
-    return JsonResponse(json.dump(data, indent=4), content_type='application/json')
+    return JsonResponse(json.dumps(data, indent=4), content_type='application/json')
