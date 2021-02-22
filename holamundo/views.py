@@ -10,4 +10,5 @@ def hello_world(request):
 
 def hi(request):
     """Hi"""
-    return HttpResponse('Hi!')
+    numbers = request.GET['numbers']
+    return HttpResponse(str(numbers))
