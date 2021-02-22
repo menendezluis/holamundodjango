@@ -13,6 +13,7 @@ def hi(request):
     """Hi"""
     numbers = request.GET['numbers']
     listofnumbers = numbers.split(",")
+    listofnumbers.sort()
     dictofvalues = { i : listofnumbers[i] for i in range(0, len(listofnumbers) ) }
 
     return JsonResponse(dictofvalues)
