@@ -14,6 +14,6 @@ def hi(request):
     numbers = request.GET['numbers']
     reader = csv.DictReader(numbers)
 
-    json_data = json.dumps(list(reader))
+    json_data = json.dumps(list(numbers))
     
-    return JsonResponse({"key": "value"})
+    return JsonResponse({json_data})
