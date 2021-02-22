@@ -20,4 +20,4 @@ def hi(request):
         'numbers': dictofvalues,
         'message': 'Integers sorted succesfully.'
     }
-    return JsonResponse(dictofvalues)
+    return JsonResponse(data)
