@@ -30,7 +30,7 @@ def list_posts(request):
         content.append("""
         <p><strong>{name}</strong></p>
         <p><small>{user} - <i>{timestamp}</i></small></p>
-        <figure><img src="{picture}"/>)</figure>
+        <figure><img src="{picture}"/></figure>
         """.format(**post))
     return HttpResponse('<br>'.join(content))
 # Create your views here.
