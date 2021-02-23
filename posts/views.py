@@ -1,5 +1,5 @@
 #Django
-from django.shorcuts import render
+from django.shortcuts import render
 from datetime import datetime
 
 posts = [
