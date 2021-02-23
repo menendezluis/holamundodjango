@@ -24,5 +24,5 @@ posts = [
 ]
 
 def list_posts(request):
-  return render(request, 'feed.html',)
+  return render(request, 'feed.html', {'name': 'luis'})
   # Create your views here.
