@@ -1,6 +1,11 @@
 from django.urls import path 
-from holamundo import views
+from holamundo import views as local_views
+from posts import views as posts_views
+
+from holamundo import 
 urlpatterns = [
-    path('hello-world/', views.hello_world),
-    path('hi/', views.hi),
+    path('hello-world/', local_views.hello_world),
+    path('hi/', local_views.hi),
+
+    path('posts/', posts_views.list_posts),
 ]
